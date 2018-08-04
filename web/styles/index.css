@@ -1,0 +1,87 @@
+.company-list li {
+	position: relative;
+	float: left;
+	background:#ffffff;
+	border:1px solid #dddee3;
+	border-radius:2px;
+	width:298px;
+	height:234px;
+	margin-right: 22px;
+	border-radius: 2px;
+	overflow: hidden;
+}
+.company-list li.mr-none{
+	margin-right: 0;
+}
+.company-list li h2 {
+	line-height: 49px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #333;
+	height: 49px;
+	border-bottom: 1px solid #dddee3;
+}
+.lenged {
+	height: 29px;
+	width:237px;
+	margin-left: 42px;
+	line-height: 29px;
+	border-bottom:1px solid #dddee3;
+	font-size: 12px;
+	color: #777e8c;
+}
+.lenged i {
+	display: block;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+}
+.lenged .before {
+	float: left;
+	margin-left: 56px;
+}
+.lenged .after {
+	float: left;
+	margin-left: 10px;
+}
+.company-list li .exs{
+	position: absolute;
+	top: 30px;
+	width: 296px;
+	height: 230px;
+}
+.cricle {
+	display: block;
+	float: left;
+	margin-top: 17px;
+	margin-right: 10px;
+	margin-left: 20px;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+}
+.cricle-red {
+	background-color: #ef6b4f;
+}
+.cricle-greeb {
+	background-color: #54bc9b;
+}
+.cricle-blue {
+	background-color: #00a0e9;
+}
+.cricle-yellow {
+	background-color: #f1c33f;
+}
+.cricle-sky {
+	background-color: #38cac0;
+}
+.cricle-ori {
+	background-color: #fe9616;
+}
+.cricle-pur {
+	background-color: #ff72b9;
+}
+.cricle-gray {
+	background-color: #dfe0e5;
+}

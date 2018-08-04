@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <title>ECharts</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/main.css"/>-->
+    <script src="./jquery.js"></script>
+    <script src="echarts.js"></script>
+    <script src="china.js"></script>
+    <style>#china-map {width:1000px; height: 1000px;margin: auto;}</style>
+</head>
+<body>
+<div id="china-map"></div>
+<script>
+    var myChart = echarts.init(document.getElementById('china-map'));
+    var option = {
+    	title: {
+    		text: '数量分布图',
+    		subtext: '',
+    		x: 'center'
+    	},
+    	tooltip: {
+    		trigger: 'item'
+    	},
+    	legend: {
+    		show: false,
+    		orient: 'vertical',
+    		x: 'left',
+    		data: []
+    	},
+    	dataRange: {
+    		show: false,
+    		min: 0,
+    		max: 0,
+    		x: 'left',
+    		y: 'bottom',
+    		text: [], // 文本，默认为数值文本
+    		calculable: true
+    	},
+    	toolbox: {
+    		show: false,
+    		orient: 'vertical',
+    		x: 'right',
+    		y: 'center',
+    		feature: {
+    			mark: {
+    				show: true
+    			},
+    			dataView: {
+    				show: true,
+    				readOnly: false
+    			},
+    			restore: {
+    				show: true
+    			},
+    			saveAsImage: {
+    				show: true
+    			}
+    		}
+    	},
+    	roamController: {
+    		show: true,
+    		x: 'right',
+    		mapTypeControl: {
+    			'china': true
+    		}
+    	},
+    	series: [{
+    		name: 'iphone3',
+    		type: 'map',
+    		mapType: 'china',
+    		roam: false,
+    		itemStyle: {
+    			normal: {
+    				label: {
+    					show: true
+    				}
+    			},
+    			emphasis: {
+    				label: {
+    					show: true
+    				}
+    			}
+    		},
+    		markPoint:{
+    			symbol:'circle',
+    			symbolSize:'30',
+    			label:{
+    				normal:{
+    					show:true,
+    					color:'#f00'
+    				}
+    			},
+    			data:[{
+    				name:'安徽',
+    				coord:[12,25]
+    			}]
+    		},
+    		data: [{
+    			name: '湖南',
+    			value: 3
+    		}, {
+    			name: '安徽',
+    			value: 3
+    		},{
+    			name: '甘肃',
+    			value: 3
+    		}, {
+    			name: '山西',
+    			value: 3
+    		}, {
+    			name: '内蒙古',
+    			value: 3
+    		}, {
+    			name: '陕西',
+    			value: 3
+    		}, {
+    			name: '吉林',
+    			value: 3
+    		}, {
+    			name: '福建',
+    			value: 3
+    		}, {
+    			name: '贵州',
+    			value: 3
+    		}]
+    	}]
+    };
+
+    myChart.setOption(option);
+    myChart.on('mouseover', function(params) {
+    	var dataIndex = params.dataIndex;
+    	//console.log(params);
+    });
+</script>
+</body>
+</html>
